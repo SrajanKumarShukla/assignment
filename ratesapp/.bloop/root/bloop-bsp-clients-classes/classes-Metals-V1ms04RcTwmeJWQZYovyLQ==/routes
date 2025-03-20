@@ -1,0 +1,5 @@
+# Routes
+
+GET    /rate/search/buying    controllers.RateController.searchBuyingRates(mode: Option[String], orgCountry: Option[String], destCountry: Option[String], orgPort: Option[String], destPort: Option[String])
+
+
