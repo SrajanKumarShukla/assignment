@@ -1,6 +1,7 @@
-# Routes
-GET    /                         controllers.HomeController.index()
+# routes
+GET    /assets/:file    controllers.Assets.versioned(path="/public", file: Asset)
+
 GET    /rate/search/:rateType    controllers.RateController.searchRates(rateType:String,mode: Option[String], orgCountry: Option[String], destCountry: Option[String], orgPort: Option[String], destPort: Option[String])
 GET    /:mode/ports/list         controllers.RateController.listPorts(mode:String)
  
-POST    /rate/:rateType/insert    controllers.RateController.insertRate(rateType: String) -> able to insert the buying rates into database 
+POST    /rate/:rateType/insert    controllers.RateController.insertRate(rateType: String)
